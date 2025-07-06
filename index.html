@@ -7,30 +7,30 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f0f4f8;
+      background-color: #121212;
       margin: 0;
       padding: 2rem;
-      color: #333;
+      color: #f5f5f5;
     }
 
     h1 {
       text-align: center;
-      color: #1a73e8;
+      color: #ffa500; /* naranja */
       margin-bottom: 1rem;
     }
 
     .instructions {
       max-width: 900px;
       margin: 0 auto 2rem;
-      background-color: #ffffff;
+      background-color: #1e1e1e;
       padding: 1.5rem 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     .instructions h2 {
       margin-top: 0;
-      color: #1a73e8;
+      color: #ffa500;
     }
 
     .main {
@@ -41,16 +41,15 @@
     }
 
     .box {
-      background-color: #ffffff;
+      background-color: #1e1e1e;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       width: 400px;
       min-height: 300px;
     }
 
     .box h2 {
-      color: #1a73e8;
       margin-bottom: 1rem;
     }
 
@@ -60,42 +59,59 @@
       gap: 1rem;
     }
 
+    /* Estilos para los botones según tipo */
+    .creacional a {
+      background-color: #ff8c00;
+    }
+    .creacional a:hover {
+      background-color: #e67e00;
+    }
+
+    .estructural a {
+      background-color: #2ecc71;
+    }
+    .estructural a:hover {
+      background-color: #27ae60;
+    }
+
+    .comportamental a {
+      background-color: #9b59b6;
+    }
+    .comportamental a:hover {
+      background-color: #8e44ad;
+    }
+
     .downloads a {
       text-decoration: none;
       color: #ffffff;
-      background-color: #1a73e8;
       padding: 0.75rem 1rem;
       border-radius: 8px;
       transition: background-color 0.3s ease;
       flex: 1 1 45%;
       text-align: center;
     }
-
-    .downloads a:hover {
-      background-color: #0c55b6;
-    }
   </style>
 </head>
 <body>
   <h1>Descarga de Ejercicios - Patrones de Diseño</h1>
 
-  <!-- Sección de instrucciones arriba -->
+  <!-- Instrucciones -->
   <div class="instructions">
     <h2>Instrucciones Generales</h2>
     <p>En esta página puedes descargar ejercicios prácticos de los patrones de diseño <strong>creacionales</strong>, <strong>estructurales</strong> y <strong>comportamentales</strong>.</p>
     <ul>
-      <li>Haz clic en cualquier botón para descargar el archivo .zip del patrón correspondiente.</li>
+      <li>Haz clic en cualquier botón para descargar el archivo `.zip` del patrón correspondiente.</li>
       <li>Descomprime el archivo en tu computadora.</li>
       <li>Abre el proyecto en tu IDE para revisar el código o modificarlo.</li>
     </ul>
   </div>
 
-  <!-- Dos secciones horizontales abajo -->
+  <!-- Secciones de patrones -->
   <div class="main">
-    <!-- Patrones Creacionales -->
+    <!-- Creacionales -->
     <div class="box">
-      <h2>Patrones Creacionales</h2>
-      <div class="downloads">
+      <h2 style="color: #ff8c00;">Patrones Creacionales</h2>
+      <div class="downloads creacional">
         <a href="Patrones/Creacionales/1. Factory Method.zip" download>Factory Method</a>
         <a href="Patrones/Creacionales/2. Abstract Factory.zip" download>Abstract Factory</a>
         <a href="Patrones/Creacionales/3. Singleton.zip" download>Builder</a>
@@ -104,10 +120,10 @@
       </div>
     </div>
 
-    <!-- Patrones Estructurales -->
+    <!-- Estructurales -->
     <div class="box">
-      <h2>Patrones Estructurales</h2>
-      <div class="downloads">
+      <h2 style="color: #2ecc71;">Patrones Estructurales</h2>
+      <div class="downloads estructural">
         <a href="Patrones/Estructurales/1. Composite.zip" download>Adapter</a>
         <a href="Patrones/Estructurales/2. Proxy.zip" download>Bridge</a>
         <a href="Patrones/Estructurales/3. Facade.zip" download>Composite</a>
@@ -118,11 +134,11 @@
       </div>
     </div>
 
-    <!-- Patrones Comportamentales -->
+    <!-- Comportamentales -->
     <div class="box">
-      <h2>Patrones Comportamentales</h2>
-      <div class="downloads">
-        <a href="Patrones/Comportamentales/1. Chain Responsability.zip" download>Chain Resposibility</a>
+      <h2 style="color: #9b59b6;">Patrones Comportamentales</h2>
+      <div class="downloads comportamental">
+        <a href="Patrones/Comportamentales/1. Chain Responsability.zip" download>Chain Responsibility</a>
         <a href="Patrones/Comportamentales/2. State.zip" download>State</a>
         <a href="Patrones/Comportamentales/3. Strategy.zip" download>Strategy</a>
         <a href="Patrones/Comportamentales/4. Observer.zip" download>Observer</a>
