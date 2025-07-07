@@ -10,12 +10,12 @@
       background-color: #121212;
       margin: 0;
       padding: 2rem;
-      color: #ffffff; /* Todo el texto en blanco por defecto */
+      color: #f5f5f5;
     }
 
     h1 {
       text-align: center;
-      color: #ffffff; /* Título principal naranja */
+      color: #ffa500; /* naranja */
       margin-bottom: 1rem;
     }
 
@@ -30,7 +30,7 @@
 
     .instructions h2 {
       margin-top: 0;
-      color: #ffffff; /* Título blanco */
+      color: #ffa500;
     }
 
     .main {
@@ -49,17 +49,8 @@
       min-height: 300px;
     }
 
-    /* Colores para títulos de las secciones */
-    .box.creacional h2 {
-      color: #ff8c00;
-    }
-
-    .box.estructural h2 {
-      color: #2ecc71;
-    }
-
-    .box.comportamental h2 {
-      color: #9b59b6;
+    .box h2 {
+      margin-bottom: 1rem;
     }
 
     .downloads {
@@ -68,17 +59,7 @@
       gap: 1rem;
     }
 
-    /* Botones */
-    .downloads a {
-      text-decoration: none;
-      color: #ffffff;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-      flex: 1 1 45%;
-      text-align: center;
-    }
-
+    /* Estilos para los botones según tipo */
     .creacional a {
       background-color: #ff8c00;
     }
@@ -99,6 +80,16 @@
     .comportamental a:hover {
       background-color: #8e44ad;
     }
+
+    .downloads a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      flex: 1 1 45%;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -109,8 +100,8 @@
     <h2>Instrucciones Generales</h2>
     <p>En esta página puedes descargar ejercicios prácticos de los patrones de diseño <strong>creacionales</strong>, <strong>estructurales</strong> y <strong>comportamentales</strong>.</p>
     <ul>
-      <li>Haz clic en cualquier botón para descargar el archivo `.zip` del patrón correspondiente.</li>
-      <li>Descomprime el archivo en tu computadora.</li>
+      <li>Haz clic en cualquier botón para descargar el archivo <strong>.zip</strong> del patrón correspondiente.</li>
+      <li>El archivo contiene tres ejercicios de cada patron, cada uno con su diagrama UML correspondiente</li>
       <li>Abre el proyecto en tu IDE para revisar el código o modificarlo.</li>
     </ul>
   </div>
@@ -118,9 +109,9 @@
   <!-- Secciones de patrones -->
   <div class="main">
     <!-- Creacionales -->
-    <div class="box creacional">
-      <h2>Patrones Creacionales</h2>
-      <div class="downloads">
+    <div class="box">
+      <h2 style="color: #ff8c00;">Patrones Creacionales</h2>
+      <div class="downloads creacional">
         <a href="Patrones/Creacionales/1. Factory Method.zip" download>Factory Method</a>
         <a href="Patrones/Creacionales/2. Abstract Factory.zip" download>Abstract Factory</a>
         <a href="Patrones/Creacionales/3. Singleton.zip" download>Builder</a>
@@ -130,9 +121,9 @@
     </div>
 
     <!-- Estructurales -->
-    <div class="box estructural">
-      <h2>Patrones Estructurales</h2>
-      <div class="downloads">
+    <div class="box">
+      <h2 style="color: #2ecc71;">Patrones Estructurales</h2>
+      <div class="downloads estructural">
         <a href="Patrones/Estructurales/1. Composite.zip" download>Adapter</a>
         <a href="Patrones/Estructurales/2. Proxy.zip" download>Bridge</a>
         <a href="Patrones/Estructurales/3. Facade.zip" download>Composite</a>
@@ -144,15 +135,17 @@
     </div>
 
     <!-- Comportamentales -->
-    <div class="box comportamental">
-      <h2>Patrones Comportamentales</h2>
-      <div class="downloads">
+    <div class="box">
+      <h2 style="color: #9b59b6;">Patrones Comportamentales</h2>
+      <div class="downloads comportamental">
         <a href="Patrones/Comportamentales/1. Chain Responsability.zip" download>Chain Responsibility</a>
         <a href="Patrones/Comportamentales/2. State.zip" download>State</a>
         <a href="Patrones/Comportamentales/3. Strategy.zip" download>Strategy</a>
         <a href="Patrones/Comportamentales/4. Observer.zip" download>Observer</a>
         <a href="Patrones/Comportamentales/5. Iterator.zip" download>Iterator</a>
         <a href="Patrones/Comportamentales/6. Command.zip" download>Command</a>
+        <a href="Patrones/Comportamentales/7. Memento.zip" download>Memento</a>
+        <a href="Patrones/Comportamentales/8. Template.zip" download>Template</a>
       </div>
     </div>
   </div>
