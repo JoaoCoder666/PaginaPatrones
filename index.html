@@ -3,34 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Descargas - Patrones de Diseño</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    html {
+      height: 100%;
+      background: linear-gradient(-45deg, #0f2027, #2c5364, #1c1c1c, #2f2f2f);
+      background-size: 400% 400%;
+      animation: fondoAnimado 20s ease infinite;
+    }
+
+    @keyframes fondoAnimado {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #121212;
+      font-family: 'Poppins', sans-serif;
+      background: transparent;
       margin: 0;
       padding: 2rem;
-      color: #f5f5f5;
+      color: #ffffff;
     }
 
     h1 {
       text-align: center;
-      color: #ffa500; /* naranja */
-      margin-bottom: 1rem;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
     }
 
     .instructions {
       max-width: 900px;
-      margin: 0 auto 2rem;
-      background-color: #1e1e1e;
-      padding: 1.5rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      margin: 0 auto 2.5rem;
+      background-color: rgba(40, 40, 40, 0.9);
+      padding: 2rem 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
     .instructions h2 {
+      color: #ffffff;
       margin-top: 0;
-      color: #ffa500;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .instructions ul {
+      padding-left: 1.2rem;
     }
 
     .main {
@@ -41,25 +62,45 @@
     }
 
     .box {
-      background-color: #1e1e1e;
+      background-color: rgba(40, 40, 40, 0.9);
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
       width: 400px;
-      min-height: 300px;
+      min-height: auto; /* ya no fija altura */
+      display: block; /* eliminamos flex innecesario */
     }
 
     .box h2 {
       margin-bottom: 1rem;
+      font-size: 1.3rem;
+      font-weight: 500;
     }
 
     .downloads {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      margin-top: auto;
     }
 
-    /* Estilos para los botones según tipo */
+    .downloads a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      flex: 1 1 45%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .downloads a:hover {
+      transform: scale(1.05);
+    }
+
     .creacional a {
       background-color: #ff8c00;
     }
@@ -81,32 +122,24 @@
       background-color: #8e44ad;
     }
 
-    .downloads a {
-      text-decoration: none;
-      color: #ffffff;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-      flex: 1 1 45%;
-      text-align: center;
+    @media (prefers-reduced-motion: reduce) {
+      html { animation: none; }
     }
   </style>
 </head>
 <body>
-  <h1 style="color: #ffffff;">Descarga de Ejercicios - Patrones de Diseño</h1>
+  <h1>Descarga de Ejercicios - Patrones de Diseño</h1>
 
-  <!-- Instrucciones -->
   <div class="instructions">
-    <h2 style="color: #ffffff;">Instrucciones Generales</h2>
+    <h2>Instrucciones Generales</h2>
     <p>En esta página puedes descargar ejercicios prácticos de los patrones de diseño <strong>creacionales</strong>, <strong>estructurales</strong> y <strong>comportamentales</strong>.</p>
     <ul>
       <li>Haz clic en cualquier botón para descargar el archivo <strong>.zip</strong> del patrón correspondiente.</li>
-      <li>El archivo contiene tres ejercicios de cada patron, cada uno con su diagrama UML correspondiente</li>
+      <li>El archivo contiene tres ejercicios de cada patrón, cada uno con su diagrama UML correspondiente.</li>
       <li>Abre el proyecto en tu IDE para revisar el código o modificarlo.</li>
     </ul>
   </div>
 
-  <!-- Secciones de patrones -->
   <div class="main">
     <!-- Creacionales -->
     <div class="box">
